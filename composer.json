@@ -1,0 +1,14 @@
+{
+    "name": "stepanrayjkevich/framework-php",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Stepan Raikevich"
+        }
+    ],
+    "require": {}
+}
