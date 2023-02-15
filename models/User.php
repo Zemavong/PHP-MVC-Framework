@@ -47,4 +47,14 @@ const STATUS_DELETED = 2;
     {
         return ['firstname', 'lastname','email', 'password', 'status'];
     }
+
+    public function labels(): array {
+        return [
+            'firstname' => 'Frist name',
+            'lastname' => 'Last name',
+            'email' => 'Email',
+            'password' => 'Frist name',
+            'passwordConfirm' => 'Confirm password',
+        ];
+    }
 }
