@@ -2,9 +2,9 @@
 
 namespace app\models;
 
-use app\core\DbModel;
+use app\core\UserModel;
 
-class User extends DbModel{
+class User extends UserModel{
 const STATUS_INACTIVE = 0;
 const STATUS_ACTIVE = 1;
 const STATUS_DELETED = 2;
@@ -16,9 +16,14 @@ const STATUS_DELETED = 2;
     public string $password='';
     public string $passwordConfirm='';
 
-    public function tableName(): string
+    public static function tableName(): string
     {
         return 'users';
+    }
+    
+    public static function primaryKey()
+    {
+        return 'id';
     }
 
     public function save() {
@@ -30,6 +35,8 @@ const STATUS_DELETED = 2;
     public function register() {
         return $this->save();
     }
+
+    
 
     public function rules(): array {
         return [
@@ -56,5 +63,10 @@ const STATUS_DELETED = 2;
             'password' => 'Frist name',
             'passwordConfirm' => 'Confirm password',
         ];
+    }
+
+    public function getDisplayName(): string
+    {
+        return $this->firstname.' '.$this->lastname;
     }
 }
