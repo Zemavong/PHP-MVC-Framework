@@ -2,10 +2,6 @@
 
 use app\core\Application;
 
-echo "<pre>";
-var_dump(Application::$app->user);
-echo "</pre>";
-
 ?>
 
 <!doctype html>
@@ -32,7 +28,7 @@ echo "</pre>";
           <a class="nav-link" href="/contact">Contact</a>
         </li>
       </ul>
-      <?php if(Application::isGuest()):?>
+      <?php if (Application::isGuest()): ?>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/login">Login</a>
@@ -44,11 +40,16 @@ echo "</pre>";
       <?php else: ?>
         <ul class="navbar-nav ml-auto">
         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/profile">
+            Profile
+          </a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/logout">Welcome (Logout)
         </a>
         </li>
       </ul>
-      <?php endif; ?>
+      <?php endif;?>
     </div>
   </div>
 </nav>
@@ -56,7 +57,7 @@ echo "</pre>";
 <div class="container">
   <?php if (Application::$app->session->getFlash('success')): ?>
   <div class="alert alert-success">
-    <?php echo Application::$app->session->getFlash('success')?>
+    <?php echo Application::$app->session->getFlash('success') ?>
   </div>
   <?php endif;?>
   {{content}}
