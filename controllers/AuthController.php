@@ -9,7 +9,6 @@ use app\core\Response;
 use app\models\LoginForm;
 use app\models\RegisterModel;
 use app\models\User;
-use app\core\middlewares;
 use app\core\middlewares\AuthMiddleware;
 
 class AuthController extends Controller
