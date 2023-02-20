@@ -1,0 +1,15 @@
+{
+    "name": "zemavong/php-mvc-framework",
+    "autoload": {
+        "psr-4": {
+            "Zemavong\\PhpMvcFramework\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Stepan",
+            "email": "stepanraikevich@gmail.com"
+        }
+    ],
+    "require": {}
+}
