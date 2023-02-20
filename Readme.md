@@ -1,7 +1,7 @@
 ## Table of contents
-**[Why this framework?](https://github.com/Zemavong/PHP-MVC-Framework#Why--this--framework?)**
+**[Why this framework?](https://github.com/Zemavong/PHP-MVC-Framework#why-this-framework)**
 
-**[How to run?](https://github.com/Zemavong/PHP-MVC-Framework#How--to--run?)**
+**[How to run?](https://github.com/Zemavong/PHP-MVC-Framework#how-to-run)**
 
 ------
 
